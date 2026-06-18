@@ -131,7 +131,7 @@ public class LocacaoViewer{
         }
         for(int i = 0; i < historico.size(); i++){
             Locacao loc = historico.get(i);
-            System.out.printf("Cliente: %s | Func: %s | Retirada: %s | Devolução: %s | Placa Veículo: %s\n",
+            System.out.printf("Cliente: %s | Funcionario: %s | Retirada: %s | Devolução: %s | Placa Veículo: %s\n",
             loc.getCliente().getNome(), loc.getFuncionario().getNome(), loc.getDataLocacao(), loc.getDataDevolucao(), loc.getVeiculo().getPlaca());
         }
         Log.gravar("SUCESSO: Locação(ões) impressas em mostrarHistorico().");
