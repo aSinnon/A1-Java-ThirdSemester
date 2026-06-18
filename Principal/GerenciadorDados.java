@@ -7,7 +7,7 @@ public class GerenciadorDados{
 
     public static void salvarArraylistParaArquivo(String nomeArquivo, ArrayList<?> lista) {
         try(FileOutputStream fos = new FileOutputStream(nomeArquivo); ObjectOutputStream oos = new ObjectOutputStream(fos)){
-            oos.writeObject(lista); // Salva a lista inteira de uma vez só!
+            oos.writeObject(lista);
         } catch(IOException e){
             System.out.println("Erro ao salvar o arquivo " + nomeArquivo + ": " + e.getMessage());
         }
