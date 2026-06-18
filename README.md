@@ -3,7 +3,7 @@
 # Sistema de Locação de Veículos
 
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)]([https://github.com/](https://github.com/aSinnon/A1-Java-ThirdSemester))
 
 Um sistema completo de gerenciamento e locação de veículos (carros e motos) desenvolvido em Java puro. O projeto simula o funcionamento interno de uma locadora, abrangendo desde o cadastro de clientes e controle de frotas até o fluxo de locação, devolução, persistência de dados em arquivos binários e auditoria via logs de sistema.
 
