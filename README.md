@@ -16,7 +16,7 @@ O objetivo principal deste projeto foi aplicar conceitos avançados de **Program
 
 ### Funcionalidades Principais
 * **Gerenciamento de Pessoas:** Cadastro, edição, exclusão e listagem de Clientes (com taxas de Cashback) e Funcionários (com bônus).
-* **Gerenciamento de Frota:** Cadastro e listagem de Carros (atribuição de cavalos de potência) e Motas (atribuição de cilindradas), controlando dinamicamente o status de disponibilidade.
+* **Gerenciamento de Frota:** Cadastro e listagem de Carros (atribuição de cavalos de potência) e Motos (atribuição de cilindradas), controlando dinamicamente o status de disponibilidade.
 * **Fluxo Automatizado de Locação:** * Validação em tempo real da existência de clientes e funcionários por CPF.
   * Filtro inteligente de veículos para garantir que apenas automóveis disponíveis (`true`) possam ser selecionados.
   * Resolução de ambiguidade por meio da busca por placa em casos de veículos com marcas/modelos idênticos.
