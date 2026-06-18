@@ -1,6 +1,6 @@
 # A1-Java-ThirdSemester
 
-# 🚗 Sistema de Locação de Veículos
+# Sistema de Locação de Veículos
 
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
@@ -9,12 +9,12 @@ Um sistema completo de gerenciamento e locação de veículos (carros e motos) d
 
 ---
 
-## 📌 Informações Gerais sobre o Projeto
+## Informações Gerais sobre o Projeto
 
-### 🎯 Objetivos
+### Objetivos
 O objetivo principal deste projeto foi aplicar conceitos avançados de **Programação Orientada a Objetos (POO)** e a arquitetura em camadas (separação entre visualização e regras de negócio) para solucionar um problema real de gestão. O foco foi construir um código modular, altamente extensível, seguro contra concorrência de locações e resiliente a reinicializações.
 
-### ⚙️ Funcionalidades Principais
+### Funcionalidades Principais
 * **Gerenciamento de Pessoas:** Cadastro, edição, exclusão e listagem de Clientes (com taxas de Cashback) e Funcionários (com bônus).
 * **Gerenciamento de Frota:** Cadastro e listagem de Carros (atribuição de cavalos de potência) e Motas (atribuição de cilindradas), controlando dinamicamente o status de disponibilidade.
 * **Fluxo Automatizado de Locação:** * Validação em tempo real da existência de clientes e funcionários por CPF.
@@ -25,27 +25,27 @@ O objetivo principal deste projeto foi aplicar conceitos avançados de **Program
 
 ---
 
-## 🏗️ Estrutura das Classes e suas Relações
+## Estrutura das Classes e suas Relações
 
 O projeto é organizado de forma modular utilizando **Packages (Pacotes)** para isolar responsabilidades, adotando uma variação conceitual do padrão MVC (Model-View-Controller):
 
-### 📁 Pacote `JoaoMCV` (Módulo de Pessoas)
+### Pacote `JoaoMCV` (Módulo de Pessoas)
 * **`Pessoa` (Classe Abstrata - Model):** Classe base contendo atributos como nome, CPF e telefone. Define as assinaturas abstratas para as taxas/bônus.
 * **`Cliente` e `Funcionario` (Herança):** Especializações de `Pessoa`.
 * **`PessoaController`:** Gerencia as listas na memória RAM, valida buscas por CPF e interage com o salvamento de dados.
 * **`PessoaViewer`:** Interface de console que interage com o usuário para operações de clientes.
 
-### 📁 Pacote `ZionMCV` (Módulo de Veículos)
+### Pacote `ZionMCV` (Módulo de Veículos)
 * **`Veiculo` (Classe Abstrata - Model):** Classe base contendo placa, marca, modelo, ano e o estado booleano de disponibilidade.
 * **`Carro` e `Moto` (Herança):** Especializações de `Veiculo` contendo particularidades (cavalos e cilindradas).
 * **`VeiculoController` e `VeiculoViewer`:** Respectivamente, o motor de regras de negócio da frota e a interface visual de gerenciamento de veículos.
 
-### 📁 Pacote `LeoMCV` (Módulo de Locações)
+### Pacote `LeoMCV` (Módulo de Locações)
 * **`Locacao` (Classe Abstrata - Model):** Representa o contrato de locação. Possui uma relação de **Associação** com as classes `Cliente` e `Funcionario`. Define métodos polimórficos abstratos para manipulação do veículo alugado.
 * **`LocacaoCarro` e `LocacaoMoto` (Herança & Composição/Polimorfismo):** Classes que herdam de `Locacao` e aplicam polimorfismo para amarrar, especificamente, objetos do tipo `Carro` ou `Moto`.
 * **`LocacaoController` e `LocacaoViewer`:** Camada responsável pela validação das regras de negócio das locações (ex: bloquear veículos indisponíveis, liberar status na devolução) e interface de menus.
 
-### 📁 Pacote `Principal` (Núcleo do Sistema)
+### Pacote `Principal` (Núcleo do Sistema)
 * **`PrincipalViewer`:** Ponto de entrada do programa. Configura a ordem correta de inicialização: primeiro carrega os arquivos do disco para as listas e depois renderiza o menu principal.
 * **`GerenciadorDados`:** Classe utilitária genérica contendo streams de dados (`ObjectOutputStream` / `ObjectInputStream`) para ler e gravar arquivos `.dat`.
 * **`Log`:** Mecanismo responsável por abrir o arquivo `log.txt
